@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     $.ajax({
         type: "GET",
@@ -47,16 +46,17 @@ function CSVToArray( strData, strDelimiter ){
     arrData[ arrData.length - 1 ].push( strMatchedValue );
   }
   
-  var finalArray =[]
-  for (var i in arrData) {
-	  if (i!=0) {
-	  finalArray.push(arrData)
-	  }
-  }
- 	
-	useCSV(finalArray);
+ 
+	useCSV(arrData);
 }
 
 function useCSV(data) {
-	console.log("Do whatever you want in this function using the data from the CSV", data, data[0], data[0][1])
+	for (var i in data) {
+	  
+	  if (i!=0) {
+		  	//PUT YOUR CODE HERE
+			console.log("Do whatever you want in this function using the data from the CSV", data[i], data[i][1])
+	  }
+	  
+	}
 }
